@@ -1,6 +1,6 @@
-# Kubernetes in 7 Days - First Application
+First Application
 
-Within this directory are the files used to deploy the first application, as per this [guide](../01-getting-started-with-kubernetes/01-05.md).
+Within this directory are the files used to deploy the first application.
 
 Build application.
 
@@ -21,4 +21,9 @@ Test application with _Minikube_.
 ```console
 kubectl -n default apply -f kubernetes
 curl `minikube service -n default first-app --url`
+```
+
+Deploy kubernetes application
+```console
+k create -f kubernetes/
 ```
