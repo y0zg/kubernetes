@@ -1,5 +1,6 @@
 #!/bin/bash
 source <(kubectl completion bash)
+source <(helm completion bash)
 complete -F __start_kubectl k
 
 alias k=”kubectl”
