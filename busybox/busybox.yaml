@@ -1,10 +1,11 @@
 apiVersion: v1
-kind: busybox
+kind: Pod
 metadata:
   name: busybox-example
 spec:
   containers:
   - name: busybox-container
     image: busybox
-    command: ["echo"]
-    args: ["Hello World"]
+    command: 
+      - sleep
+      - "3600"
