@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: lab1
+  namespace: default
+spec:
+  containers:
+  - name: lab1
+    image: httpd
+    command: 
+      - sleep
+      - "3600"
