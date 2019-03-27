@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: busybox
+metadata:
+  name: busybox-example
+spec:
+  containers:
+  - name: busybox-container
+    image: busybox
+    command: ["echo"]
+    args: ["Hello World"]
