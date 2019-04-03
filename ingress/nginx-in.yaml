@@ -1,0 +1,16 @@
+# minikube
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+        name: nginx-ingress
+        anootations:
+                ingress.kubernetes.io/rewrite-target: /
+spec:
+        rules:
+        - host:
+          http:
+                  paths:
+                  - path: /nginx
+                    backend:
+                            serviceName: nginx
+                            servicePort: 443
