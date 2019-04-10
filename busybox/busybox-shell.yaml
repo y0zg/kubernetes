@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: busybox-console
+spec:
+  containers:
+  - name: busybox-container
+    image: busybox
+    command: 
+      - ping
+      - "google.com"
