@@ -3,13 +3,7 @@ kind: Deployment
 metadata:
         name: hello-deploy
 spec:
-        replicas: 5
-        minReadySeconds: 15
-        strategy:
-                type: RollingUpdate
-                rollingUpdate:
-                        maxUnavailable: 1
-                        maxSurge: 1
+        replicas: 10
         # run 10 replicas of below template
         template:
                 metadata:
@@ -18,6 +12,6 @@ spec:
                 spec:
                   containers:
                   - name: hello-pod
-                    image: nigelpoulton/pluralsight-docker-ci:edge
+                    image: nigelpoulton/pluralsight-docker-ci:latest
                     ports:
                     - containerPort: 8080
